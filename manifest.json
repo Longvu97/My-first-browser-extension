@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Reading time",
+  "version": "1.0",
+  "description": "Add the reading time to Chrome Extension documentation articles",
+  "content_scripts": [
+    {
+      "js": ["index.js"],
+      "matches": [
+        "https://bap-software.net/*"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "contextMenus"
+  ]
+}
